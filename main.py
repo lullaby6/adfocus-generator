@@ -2,14 +2,14 @@ import requests, os
 from dotenv import load_dotenv
 from pyperclip import copy
 
-load_dotenv()
+def main():
+    os.system("title AdFocus Generator")
 
-api_key = os.getenv("API_KEY")
+    load_dotenv()
 
-os.system("title AdFocus Generator")
+    api_key = os.getenv("API_KEY")
 
-while True:
-    try:
+    while True:
         os.system("cls")
 
         url = input("URL: ")
@@ -28,5 +28,9 @@ while True:
 
         print("")
         input("Press enter to continue...")
+
+if __name__ == "__main__":
+    try:
+        main()
     except Exception as e:
-        input(e)
+            input(e)
